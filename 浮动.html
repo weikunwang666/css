@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .father{
+        background-color: aqua;
+      border: 20px solid yellow;
+      /* overflow: hidden; */
+    }
+    .father::after{
+        content:"";
+        display: table;
+        clear: both;
+    }
+    .left-son{
+         background-color: rgb(14, 65, 65);
+        height: 100px;
+        width: 100px;
+        float: left;
+    }
+    .rightson{
+        background-color: blue;
+        height: 100px;
+        width: 100px;
+        float: right;
+    }
+</style>
+<body>
+    <div class="father">
+    <div class="left-son">左浮动</div>
+    <div class="rightson">右浮动</div>
+</div>
+<p>文本文本文本文本文本文本文本文本文本文本文本文本文本</p>
+</body>
+</html>

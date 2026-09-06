@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h2{
+        color: rebeccapurple;
+    }
+    /* h3{
+        color: yellow;
+    } */
+     .width{
+        color: yellow;
+     }
+     #header{
+        color: burlywood;
+     }
+     /* 通用选择器：选择全部内容 */
+     * {
+        font-family: 'Courier New', Courier, monospace;
+     }
+     /* 子元素选择器 */
+     .father>.son{
+        color: yellowgreen;
+     }
+     /* .father>.p{
+        color: yellowgreen;
+     } 这个标签会被后代选择器覆盖*/
+     /* 后代选择器,优先级：id>类>标签名 */
+     .father p{
+        color: red;
+     }
+/* 相邻元素选择器:仅作用于h3下面标签 */
+h3+p{
+color: aqua;
+}
+/* 伪类选择器 */
+#element:hover{
+    background-color: bisque;
+}
+/*  */
+</style>
+<body>
+    <h1>不同类型选择器</h1>
+    <h2>这是一个元素选择器</h2>
+   <h3 class="width">这是一个类选择器</h3>
+   <h3>这是另一个类选择器示例</h3>
+   <h4 id="header">这是一个id选择器</h4>
+   <div class="father">
+    <p class="son">子元素</p>
+    <m class="f">例子</m>
+    <div>
+        <p class="grandson">后代选择器</p>
+    </div>
+   </div>
+<p>这是普通p标签</p>
+<h3>相邻兄弟选择器</h3>
+<p>另一个p标签</p>
+
+<h3 id="element">伪类选择器</h3>
+</body>
+</html>
